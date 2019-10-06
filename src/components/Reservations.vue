@@ -33,7 +33,7 @@
               >{{ item.guest.firstName + ' ' + item.guest.lastName }}</template>
               <template
                 v-slot:item.total="{ item }"
-              >{{ (new Date(item.checkOut).getTime()-new Date(item.checkIn).getTime())/1000/60/60/24*item.room.roomType.price}}</template>
+              >Rs. {{ (new Date(item.checkOut).getTime()-new Date(item.checkIn).getTime())/1000/60/60/24*item.room.roomType.price}}</template>
               <template v-slot:item.actions="{ item }">
                 <v-btn text icon color="red" @click.stop="deleteItem(item)">
                   <v-icon>mdi-trash-can</v-icon>
